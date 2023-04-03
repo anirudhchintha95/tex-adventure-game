@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python3 adventure.py <<zzz23EndOfMessagezzz23
+python3 adventure.py square.map <<zzz23EndOfMessagezzz23
 punch goblin
 punch goblin
 punch goblin

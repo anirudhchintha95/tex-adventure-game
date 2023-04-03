@@ -755,7 +755,7 @@ class GameEngine(object):
             print(
                 f"You cast a poison cloud! Enemies take {spell['damage']} damage per turn for the next {spell['turns']} turns including current turn."
             )
-            self.current_spell = spell
+            self.current_spell = dict(spell)
             if len(self.current_location.get('enemies', [])) > 0:
                 self.attack_enemies_with_spell_damage(
                     spell['damage']
