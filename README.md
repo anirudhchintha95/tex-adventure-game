@@ -216,6 +216,7 @@ KeyboardInterrupt
 - At the later stages, when the map was becoming bigger with extensions, that seemed counter-intuitive to just run it everytime manually.
 - Hence I wrote a simple shell script that executes the entire map.
 - Upon running this script, the chance of winning looks to be around 50%(26 wins and 24 losses).
+- `For professor and TAs:` You can follow a similar path of written in shell script. It does not include picking up items from chests. That might swing the chances in your favor.
 
 ## Bugs and challenges.
 
