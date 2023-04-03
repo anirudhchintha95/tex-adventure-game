@@ -131,11 +131,13 @@ KeyboardInterrupt
 
 ## Map layout and hints
 
+```
 8 -- 7 -- 6 -- 9
 |
 3 -- 4 -- 5
-  /  |  
+  /  |
 2 -- 1 -- 0
+```
 
 - Crafting room available at room 0 and 4.
 - Make sure you kill enemies before doing anything
