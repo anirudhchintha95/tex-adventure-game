@@ -1,0 +1,460 @@
+[
+  {
+    "id": 0,
+    "name": "En-trance",
+    "desc": "You just entered a forest and you are standing at the entrance. There is a craft table here and only one path to the west.",
+    "exits": {
+      "west": 1
+    },
+    "items": [
+      "stick",
+      "stone",
+      "berry",
+      "spinach",
+      "rat_poison"
+    ],
+    "craftable": true,
+    "enemy_attack_desc": "A goblin got spooked and started running towards you!",
+    "enemies": {
+      "goblin": {
+        "hp": 1,
+        "attack": 1,
+        "chance": 1,
+        "type": "goblin",
+        "drop": {
+          "name": "spear_recipe",
+          "type": "recipe",
+          "result": {
+            "name": "spear",
+            "type": "weapon",
+            "desc": "Deals 10 damage",
+            "damage": 10,
+            "chance": 0.9
+          },
+          "ingredients": [
+            "stick",
+            "stone"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 1,
+    "name": "The flower bed",
+    "desc": "There are literal beds with soil and plants with flowers on them. Weird!",
+    "enemy_attack_desc": "Two of biggest of the plants are shaking despite no breeze. Even weirder. Two Zombies popped out of the ground!",
+    "exits": {
+      "north": 4,
+      "west": 2,
+      "east": 0
+    },
+    "items": [
+      "berry",
+      "spinach"
+    ],
+    "enemies": {
+      "zombie1": {
+        "hp": 10,
+        "attack": 2,
+        "chance": 0.9,
+        "type": "zombie",
+        "drop": {
+          "name": "heal_recipe",
+          "type": "recipe",
+          "result": {
+            "name": "heal",
+            "type": "spell",
+            "desc": "Heals 10 hp",
+            "heal_amount": 10
+          },
+          "ingredients": [
+            "spinach",
+            "berry"
+          ]
+        }
+      },
+      "zombie2": {
+        "hp": 10,
+        "attack": 2,
+        "chance": 0.9,
+        "type": "zombie",
+        "drop": {
+          "name": "poison_recipe",
+          "type": "recipe",
+          "result": {
+            "name": "poison",
+            "type": "spell",
+            "desc": "Deals 5 hp per turn for 3 turns. It looks like enticing to drink like a mango juice, but it's not. Enemies wont know the difference.",
+            "turns": 3,
+            "damage": 5
+          },
+          "ingredients": [
+            "spinach",
+            "berry",
+            "rat_poison"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Potrait Room",
+    "desc": "You came into a room with potraits of a single goblin family. You killed one of their own. And the feeling of guilt is overwhelming.",
+    "enemy_attack_desc": "You feel like you should leave, but 2 goblins sprang on you! 'jijo hutuy chahca' they said. You open your translator and it says 'You will die for what you did to our family'.",
+    "exits": {
+      "northeast": 4,
+      "east": 1
+    },
+    "items": [
+      "wood",
+      "iron"
+    ],
+    "enemies": {
+      "mini_goblin": {
+        "hp": 3,
+        "attack": 3,
+        "chance": 0.8,
+        "type": "goblin",
+        "drop": {
+          "name": "fireball_recipe",
+          "type": "recipe",
+          "result": {
+            "name": "fireball",
+            "type": "spell",
+            "desc": "Deals 15 damage to all enemies",
+            "damage": 15
+          },
+          "ingredients": [
+            "oil",
+            "cloth",
+            "gun_powder"
+          ]
+        }
+      },
+      "giant_goblin": {
+        "hp": 10,
+        "attack": 7,
+        "chance": 0.5,
+        "type": "goblin",
+        "drop": {
+          "name": "rage_recipe",
+          "type": "recipe",
+          "result": {
+            "name": "rage",
+            "type": "spell",
+            "desc": "Increases damage by 50% for 3 turns",
+            "turns": 3,
+            "damage_multiplier": 50
+          },
+          "ingredients": [
+            "coffee_beans",
+            "sugar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "Portal Room",
+    "desc": "You are in a room with a portal(fancy door. nothing much). Can you go through it?",
+    "exits": {
+      "north": 8,
+      "east": 4
+    },
+    "items": [
+      "berry",
+      "spinach"
+    ],
+    "chest": {
+      "name": "Minor chest",
+      "type": "chest",
+      "locked": true,
+      "items": [
+        {
+          "name": "axe",
+          "type": "weapon",
+          "desc": "Deals 40 damage",
+          "damage": 40,
+          "chance": 0.7
+        },
+        {
+          "name": "big_heal",
+          "type": "spell",
+          "desc": "Heals 40 hp",
+          "heal_amount": 40
+        },
+        {
+          "name": "god_heal",
+          "type": "spell",
+          "desc": "Heals 100 hp",
+          "heal_amount": 100
+        },
+        {
+          "name": "god_hand",
+          "type": "weapon",
+          "desc": "Deals 100 damage",
+          "damage": 100,
+          "chance": 0.7
+        }
+      ],
+      "chances": [
+        0.45,
+        0.45,
+        0.05,
+        0.05
+      ],
+      "number_of_items_unlocked": 1
+    },
+    "locked_exits": [
+      "north"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Craft-y shaft",
+    "desc": "Wow. We will be able to craft something here. There are crafting tables everywhere.",
+    "craftable": true,
+    "enemy_attack_desc": "There appears to be a zombie eating other zombies brains. You stepped on a piece of glass and the zombie heard you. You can see the insatiable need for brains in its eyes. It's coming for you!",
+    "items": [
+      "oil",
+      "cloth",
+      "gun_powder",
+      "coffee_beans",
+      "sugar",
+      "berry",
+      "spinach",
+      "rat_poison"
+    ],
+    "exits": {
+      "south": 1,
+      "southwest": 2,
+      "east": 5,
+      "west": 3
+    },
+    "enemies": {
+      "giant_zombie": {
+        "hp": 20,
+        "attack": 4,
+        "chance": 0.8,
+        "drop": {
+          "name": "sword_recipe",
+          "type": "recipe",
+          "result": {
+            "name": "sword",
+            "type": "weapon",
+            "desc": "Deals 20 damage",
+            "damage": 20,
+            "chance": 0.9
+          },
+          "ingredients": [
+            "wood",
+            "iron"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Mini Giant Room",
+    "desc": "You could see that the room has taken a pounding. It's a giant room, but it's mini because of lot of debre",
+    "exits": {
+      "west": 4
+    },
+    "items": [
+      "oil",
+      "cloth",
+      "gun_powder",
+      "coffee_beans",
+      "sugar"
+    ],
+    "enemies": {
+      "zombie": {
+        "hp": 10,
+        "attack": 2,
+        "chance": 0.9,
+        "drop": {
+          "name": "wand",
+          "type": "item"
+        }
+      },
+      "zombie_goblin": {
+        "hp": 40,
+        "attack": 10,
+        "chance": 0.8,
+        "drop": {
+          "name": "key-3-8",
+          "type": "key",
+          "desc": "This key opens the door from room 3 to room 8",
+          "from": 3,
+          "to": 8
+        }
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "A red room",
+    "desc": "Room walls are painted red by what looks like blood.",
+    "enemy_attack_desc": "There are puddles of blood everywhere. You can see a giant goblin piranha in one of the puddles. It's coming for you!",
+    "enemies": {
+      "giant_goblin_piranha": {
+        "hp": 80,
+        "attack": 20,
+        "chance": 0.8,
+        "evasion_chance": 0.4,
+        "drop": {
+          "name": "sledgehammer",
+          "type": "weapon",
+          "desc": "Deals 80 damage",
+          "damage": 80,
+          "chance": 0.7
+        }
+      }
+    },
+    "chest": {
+      "name": "Major chest",
+      "type": "chest",
+      "locked": true,
+      "items": [
+        {
+          "name": "big_heal",
+          "type": "spell",
+          "desc": "Heals 40 hp",
+          "heal_amount": 40
+        },
+        {
+          "name": "ultra_heal",
+          "type": "spell",
+          "desc": "Heals 60 hp",
+          "heal_amount": 60
+        },
+        {
+          "name": "god_heal",
+          "type": "spell",
+          "desc": "Heals 100 hp",
+          "heal_amount": 100
+        }
+      ],
+      "chances": [
+        0.50,
+        0.44,
+        0.06
+      ],
+      "number_of_items_unlocked": 1
+    },
+    "locked": true,
+    "required_key": "key-7-6",
+    "exits": {
+      "west": 7,
+      "east": 9
+    }
+  },
+  {
+    "id": 7,
+    "name": "Dirty Puddle Room",
+    "desc": "This room has puddles again. But one of them is big and dirty.",
+    "exits": {
+      "east": 6,
+      "west": 8
+    },
+    "locked_exits": [
+      "east"
+    ],
+    "enemies": {
+      "piranha": {
+        "hp": 40,
+        "attack": 2,
+        "chance": 0.9,
+        "evasion_chance": 0.3,
+        "drop": {
+          "name": "ultra_heal",
+          "type": "spell",
+          "desc": "Heals 60 hp",
+          "heal_amount": 60
+        }
+      },
+      "zombie_piranha": {
+        "hp": 60,
+        "attack": 4,
+        "chance": 0.9,
+        "evasion_chance": 0.2,
+        "drop": {
+          "name": "key-7-6",
+          "type": "key",
+          "desc": "This key opens the door from room 7 to room 6",
+          "from": 7,
+          "to": 6
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "name": "Puddle Room",
+    "desc": "This room has 2 giant puddles. Nothing much. Or is there?",
+    "exits": {
+      "south": 3,
+      "east": 7
+    },
+    "locked": true,
+    "required_key": "key-3-8",
+    "enemies": {
+      "piranha1": {
+        "hp": 40,
+        "attack": 2,
+        "chance": 0.8,
+        "evasion_chance": 0.3,
+        "drop": {
+          "name": "magic_wand_recipe",
+          "type": "recipe",
+          "ingredients": [
+            "wand",
+            "magic_stone"
+          ],
+          "result": {
+            "name": "magic_wand",
+            "type": "weapon",
+            "desc": "Deals 20 damage",
+            "damage": 60,
+            "chance": 0.9
+          }
+        }
+      },
+      "piranha2": {
+        "hp": 40,
+        "attack": 2,
+        "chance": 0.8,
+        "evasion_chance": 0.3,
+        "drop": {
+          "name": "magic_stone",
+          "type": "item"
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "name": "Boss Room",
+    "desc": "You can be da boss and rain peace over the land here",
+    "enemy_attack_desc": "Suddenly, from the ground erupts some `thing`. There is just this thing/being infront of you for that",
+    "exits": {
+      "west": 6
+    },
+    "enemies": {
+      "giant_zombie_goblin_piranha": {
+        "hp": 150,
+        "attack": 25,
+        "chance": 0.6,
+        "evasion_chance": 0.3,
+        "drop": {
+          "name": "peace",
+          "type": "spell"
+        }
+      }
+    }
+  }
+]
