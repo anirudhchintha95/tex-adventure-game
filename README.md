@@ -8,6 +8,10 @@ Submitted By
 ## Description
 This is a basic text based adventure game with some very interesting extensions.
 
+## Time Spent
+
+48 hours
+
 ## Basic Verbs
 
 ### 1. `look`
