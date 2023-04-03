@@ -233,7 +233,7 @@ class GameEngine(object):
                 break
             except InvalidCommand as e:
                 print(e)
-                print("Please enter help for a list of available commands.")
+                print("Please check readme.txt for a list of valid commands.")
             except (CommandArgumentError, MaxCapacityError) as e:
                 print(e)
 
@@ -825,7 +825,7 @@ class GameEngine(object):
             print(f"You killed the {enemy}!")
             drop = self.current_location['enemies'][enemy].get('drop')
             if drop:
-                print(f"You found one {drop['type']}: {drop['name']}!")
+                print(f"You found one {drop['type']}: `{drop['name']}`!")
                 print("You can pickup the item with the 'get' command.")
                 self.current_location['complex_items'] = self.current_location.get(
                     'complex_items', []
@@ -842,8 +842,10 @@ class GameEngine(object):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Please provide a map file.")
+        sys.exit(1)
     map_parsor = MapParsor(sys.argv[1])
-    # map_parsor = MapParsor('square.map')
     map_parsor.parse()
 
     if map_parsor.is_valid():
